@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fL4-6k-qe1">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="v7M-c1-qCJ">
+            <objects>
+                <viewController id="fL4-6k-qe1" customClass="ViewController" customModule="PresentingSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y1K-ql-kdX"/>
+                        <viewControllerLayoutGuide type="bottom" id="0kM-74-9fN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0aW-Mc-FOY">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nV-34-R8w">
+                                <rect key="frame" x="212" y="225" width="57" height="30"/>
+                                <state key="normal" title="Present!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7TC-dT-8bj" kind="custom" customClass="CustomSegue" id="wpk-Jv-Oud"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2nV-34-R8w" firstAttribute="centerX" secondItem="0aW-Mc-FOY" secondAttribute="centerX" id="kFP-RD-D9l"/>
+                            <constraint firstItem="2nV-34-R8w" firstAttribute="centerY" secondItem="0aW-Mc-FOY" secondAttribute="centerY" id="mut-Tj-mJ6"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsQ-Y8-jHW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="-226"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZyY-lO-jKt">
+            <objects>
+                <viewController modalPresentationStyle="formSheet" id="7TC-dT-8bj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="02s-La-pfJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="6TX-ud-kPw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wdp-cc-jcY">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3di-1v-Rfq">
+                                <rect key="frame" x="220" y="225" width="40" height="30"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vvt-e6-xMJ" kind="unwind" unwindAction="unwindToSwift:" id="6b3-Uo-axV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.55005670360000003" green="0.92231602820000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3di-1v-Rfq" firstAttribute="centerX" secondItem="wdp-cc-jcY" secondAttribute="centerX" id="QeN-9n-jsJ"/>
+                            <constraint firstItem="3di-1v-Rfq" firstAttribute="centerY" secondItem="wdp-cc-jcY" secondAttribute="centerY" id="dBd-ti-Tb7"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJn-t9-prA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vvt-e6-xMJ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="835" y="-226"/>
+        </scene>
+    </scenes>
+</document>
